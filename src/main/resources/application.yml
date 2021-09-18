@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+    sql-script-encoding: utf-8
+    url: jdbc:mysql://127.0.0.1:13306/demo
+    username: root
+    password: password
+    initialization-mode: always
+  batch:
+    initialize-schema: always
+  thymeleaf:
+    cache: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
